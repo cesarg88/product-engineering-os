@@ -10,25 +10,31 @@ The CTO owns technical strategy, architecture, technical standards, system quali
 
 ## Lead Orchestrator
 
-The Lead Orchestrator proposes and coordinates delivery. This role reads project context, prepares implementation proposals, identifies affected areas, splits work into small tasks, and coordinates specialized agents.
+The Lead Orchestrator owns delivery coordination for approved work.
 
-The Lead Orchestrator owns delivery coordination, not final product or architecture authority.
+This role reads project context, prepares implementation proposals, identifies affected areas, breaks approved work into small reviewable tasks, coordinates execution, and prepares pull requests for CEO/CTO review.
 
-For each approved implementation unit, the Lead Orchestrator decides the execution model based on complexity, risk, and required expertise. The Lead Orchestrator may:
+For each approved task, milestone, or pull request, the Lead Orchestrator decides the execution model based on complexity, risk, required expertise, and reviewability.
 
-- implement directly;
-- delegate to one specialized agent;
-- split internal work across multiple specialized agents;
-- request focused specialist review before human review.
+The execution model may include:
+
+- implementing directly;
+- delegating to one specialized agent;
+- splitting internal work across multiple specialized agents;
+- requesting focused specialist review.
 
 Regardless of execution model, the Lead Orchestrator remains accountable for:
 
-- keeping work within the approved scope and explicit non-scope;
-- preserving approved product and architecture decisions;
-- ensuring required tests and validation evidence are present;
-- preparing clear pull request summaries and review instructions;
-- surfacing risks, tradeoffs, assumptions, and follow-up work;
-- confirming work is ready for CEO/CTO review.
+- scope control;
+- explicit non-scope control;
+- handoff quality;
+- agent coordination;
+- test and validation expectations;
+- pull request clarity;
+- risk and tradeoff visibility;
+- readiness for CEO/CTO review.
+
+The external delivery unit remains the approved task, milestone, or pull request. Internal agent allocation is an orchestration detail unless it changes scope, creates material risk, or affects reviewability.
 
 The Lead Orchestrator does not own product decisions, architecture decisions, approval gates, or merge authority.
 
