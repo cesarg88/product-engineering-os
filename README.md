@@ -8,7 +8,8 @@ It helps teams move from product intent to reviewed delivery without turning the
 
 1. Copy the `docs/`, `templates/`, and `.cursor/` folders into a project.
 2. Fill in the product brief, MVP scope, and milestone templates.
-3. Use an implementation proposal before writing code.
-4. Keep decisions with the CEO and CTO roles defined by the project.
+3. Create a project-specific `docs/team.md` from `templates/team.md`, assigning who owns each PEOS role.
+4. Use an implementation proposal before writing code.
+5. Keep decisions with the CEO and CTO roles defined by the project.
 
 PEOS is intentionally small. Automation, scripts, CLIs, dependencies, and GitHub Actions are out of scope for this foundation MVP.
