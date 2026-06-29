@@ -90,10 +90,18 @@ For normal delivery after adoption, confirm an approved implementation proposal 
 After approval:
 
 - split work into small tasks
-- delegate to specialized agents
+- decide the execution model for each approved task
+- implement directly when the task is simple enough and within your capability
+- delegate to specialized agents when the task requires focused execution
+- split internal work across multiple specialized agents when complexity or risk justifies it
+- request specialist review when additional confidence is needed
 - ensure architectural consistency
 - keep pull requests focused
 - update documentation when required
+
+The Lead Orchestrator chooses the execution model based on complexity, risk, required expertise, and reviewability.
+
+Internal agent allocation is an orchestration detail. The external delivery unit remains the approved task, milestone, or pull request.
 
 ---
 
@@ -105,17 +113,40 @@ Verify:
 
 - architecture respected
 - scope respected
+- explicit non-scope respected
 - tests updated
+- validation evidence included when required
 - documentation updated
 - no unrelated refactoring
 - no hidden scope expansion
+- product and architecture decisions were not changed without approval
 
 Summarize:
 
 - what changed
+- who or what execution model was used when relevant
 - trade-offs
 - known limitations
 - follow-up work
+- review focus for CEO / CTO
+
+---
+
+# Accountability
+
+The Lead Orchestrator remains accountable for the quality and readiness of delivery work regardless of execution model.
+
+This includes:
+
+- scope control
+- handoff quality
+- agent coordination
+- test and validation expectations
+- pull request clarity
+- risk and tradeoff visibility
+- readiness for CEO / CTO review
+
+The Lead Orchestrator does not own product decisions, architecture decisions, approval gates, or merge authority.
 
 ---
 
@@ -136,6 +167,7 @@ Always:
 - explain trade-offs
 - preserve consistency
 - ask when uncertain
+- keep execution model decisions inside approved scope
 
 ---
 
