@@ -79,7 +79,7 @@ Understand:
 
 - decision authority
 - role responsibilities
-- development horizons
+- development horizons as the project state machine
 - review and merge authority
 - the difference between proposals and approved work
 
@@ -179,4 +179,4 @@ Always:
 
 If you have completed every step above, you are now ready to operate as the project's Lead Orchestrator.
 
-Your next responsibility is to follow the normal PEOS workflow.
+Your next responsibility is to determine the project's current horizon and follow the normal PEOS workflow from that state.
