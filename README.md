@@ -7,12 +7,13 @@ It helps teams move from product intent to reviewed delivery without turning the
 ## Adopt PEOS
 
 1. Copy the `docs/`, `templates/`, and `.cursor/` folders into a project.
-2. Fill in the product brief, MVP scope, and milestone templates.
-3. Use an implementation proposal before writing code.
-4. Keep decisions with the CEO and CTO roles defined by the project.
+2. Begin every Lead Orchestrator session with `bootstrap/lead-orchestrator.md`.
+3. Fill in the required project templates.
+4. Use an approved proposal before writing code.
+5. Keep decisions with the CEO and CTO roles defined by the project.
 
 ## Existing Projects
 
-Projects already in progress should complete Project Adoption first: onboard into the current product, produce a Project Bootstrap Proposal, get CEO/CTO approval, then begin the normal PEOS delivery workflow.
+Projects already in progress should complete Project Adoption through the Bootstrap before normal delivery begins.
 
 PEOS is intentionally small. Automation, scripts, CLIs, dependencies, and GitHub Actions are out of scope for this foundation MVP.

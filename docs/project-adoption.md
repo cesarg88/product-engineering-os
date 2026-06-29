@@ -2,26 +2,14 @@
 
 Project Adoption is the one-time workflow for bringing an existing project into PEOS.
 
-It closes the gap between onboarding and normal delivery. After adoption, the project follows the standard PEOS workflow.
+It closes the gap between onboarding and normal delivery. The operational sequence lives in `bootstrap/lead-orchestrator.md`; use that document as the single entry point.
 
-## Flow
-
-1. Read PEOS.
-2. Read project documentation.
-3. Inspect the repository.
-4. Produce a Project Bootstrap Proposal.
-5. CEO / CTO review.
-6. Adopt missing PEOS assets.
-7. Begin normal implementation workflow.
+After adoption, the project follows the standard PEOS workflow.
 
 ## Onboarding Outcomes
 
-Existing project:
+Existing projects use Project Adoption and a Project Bootstrap Proposal before normal workflow begins.
 
-Onboarding -> Project Bootstrap Proposal -> Approval -> Normal workflow
-
-New project:
-
-Product Brief -> Implementation Proposal -> Approval -> Normal workflow
+New projects use product documentation and an Implementation Proposal before normal workflow begins.
 
 No implementation begins before CEO / CTO approval.

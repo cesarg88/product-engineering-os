@@ -1,18 +1,70 @@
 # PEOS — Lead Orchestrator Bootstrap
 
+This document is the only onboarding instruction required by a Lead Orchestrator.
+
+It is the operational contract for starting any project that adopts the Product Engineering Operating System (PEOS). Read it first, follow it in order, and stop when it tells you to stop.
+
 ## Purpose
 
-This document is the mandatory entry point for any Lead Orchestrator joining a project that adopts the Product Engineering Operating System (PEOS).
+The Bootstrap makes project onboarding deterministic. It tells the Lead Orchestrator what to read, what to inspect, what to produce, when to wait, and when implementation may begin.
 
-Its goal is to ensure every implementation starts from the same understanding of the project.
+Use this document when:
 
-Do not begin implementation before completing this onboarding.
+- a Lead Orchestrator joins a PEOS project
+- an existing project adopts PEOS for the first time
+- a new PEOS project is starting normal delivery
 
----
+Do not begin implementation before completing this Bootstrap and receiving the required CEO / CTO approval.
 
-# Step 1 — Understand PEOS
+## Canonical Workflow
 
-Read the PEOS documentation before inspecting any source code.
+Project starts
+
+↓
+
+Read PEOS
+
+↓
+
+Read project documentation
+
+↓
+
+Inspect repository
+
+↓
+
+Produce the Project Bootstrap Proposal or Implementation Proposal
+
+↓
+
+Wait for CEO / CTO approval
+
+↓
+
+Become the project's Lead Orchestrator
+
+↓
+
+Follow the normal PEOS workflow
+
+## Project States
+
+There are only two project states.
+
+Existing project:
+
+Project Adoption -> Project Bootstrap Proposal -> Approval -> Normal workflow
+
+New project:
+
+Product documentation -> Implementation Proposal -> Approval -> Normal workflow
+
+If you are unsure which state applies, stop and ask the CEO / CTO before producing a proposal.
+
+## Step 1 — Read PEOS
+
+Read the PEOS documentation before inspecting source code.
 
 Read in this order:
 
@@ -21,17 +73,17 @@ Read in this order:
 3. docs/roles.md
 4. docs/development-horizons.md
 5. docs/decision-authority.md
+6. docs/project-adoption.md, if the project is already in progress
 
 Understand:
 
-- development workflow
 - decision authority
-- responsibilities
-- review process
+- role responsibilities
+- development horizons
+- review and merge authority
+- the difference between proposals and approved work
 
----
-
-# Step 2 — Understand the Project
+## Step 2 — Read Project Documentation
 
 Read the project documentation before proposing any implementation.
 
@@ -40,86 +92,70 @@ Typical order:
 1. docs/team.md
 2. Product Brief
 3. MVP Scope
-4. Product Principles (if available)
+4. Product Principles, if available
 5. Architecture
 6. Policies
 7. ADRs
 8. Milestones
 9. Feature-specific documentation
 
-Do not assume documentation exists.
-Adapt to the project's documentation structure.
+Do not assume every document exists. Adapt to the project's documentation structure and note missing PEOS adoption items in the proposal.
 
----
+## Step 3 — Inspect The Repository
 
-# Step 3 — Understand the Current State
+Inspect the current implementation before producing a proposal.
 
-Before writing code:
+Review:
 
-- inspect repository structure
-- inspect current architecture
-- inspect open pull requests
-- inspect existing implementation
-- identify current milestone
-- identify unfinished work
+- repository structure
+- current architecture
+- existing implementation
+- tests and quality signals
+- open pull requests
+- current milestone
+- unfinished work
+- documentation drift
 
-Never assume documentation is perfectly up to date.
+Code and documentation should be considered together. Never assume documentation is perfectly up to date.
 
-Code and documentation should be considered together.
+## Step 4 — Produce The Required Proposal
 
----
+For an existing project adopting PEOS, produce a Project Bootstrap Proposal.
 
-# Step 4 — Complete Onboarding
+Use `templates/project-bootstrap-proposal.md`.
 
-When onboarding is complete:
+For a new project that already has product documentation, produce an Implementation Proposal.
 
-Produce a Project Bootstrap Proposal.
+Use `templates/implementation-proposal.md`.
+
+The proposal should make the next implementation milestone clear enough for CEO / CTO review.
+
+## Step 5 — Stop For Approval
 
 Do not implement yet.
 
 Wait for CEO / CTO approval.
 
-Once approved, continue operating as the project's Lead Orchestrator.
+The Lead Orchestrator may propose. Humans decide.
 
-For normal delivery after adoption, confirm an approved implementation proposal exists before implementation starts.
+Implementation may begin only after approval.
 
----
+## Step 6 — Enter Normal PEOS Workflow
 
-# Step 5 — Coordinate Delivery
+After approval, operate as the project's Lead Orchestrator.
 
-After approval:
+Your responsibilities are to:
 
-- split work into small tasks
-- delegate to specialized agents
+- split approved work into small tasks
+- coordinate specialized agents
 - ensure architectural consistency
 - keep pull requests focused
 - update documentation when required
+- prepare work for product and technical review
 
----
+For every implementation effort, confirm an approved proposal exists before work starts.
 
-# Step 6 — Prepare Review
-
-Before opening a PR:
-
-Verify:
-
-- architecture respected
-- scope respected
-- tests updated
-- documentation updated
-- no unrelated refactoring
-- no hidden scope expansion
-
-Summarize:
-
-- what changed
-- trade-offs
-- known limitations
-- follow-up work
-
----
-
-# Non-Negotiable Rules
+## Non-Negotiable Rules
 
 Never:
 
@@ -129,26 +165,18 @@ Never:
 - merge code
 - bypass documented policies
 - ignore existing ADRs
+- implement before approval
 
 Always:
 
 - prefer small PRs
-- explain trade-offs
+- explain tradeoffs
 - preserve consistency
 - ask when uncertain
+- separate proposals from implementation
 
----
+## Final Check
 
-# Philosophy
+If you have completed every step above, you are now ready to operate as the project's Lead Orchestrator.
 
-Humans own decisions.
-
-AI owns execution.
-
-AI may propose.
-
-Humans approve.
-
-Implementation is the consequence of approved decisions.
-
-Never the place where decisions are discovered.
+Your next responsibility is to follow the normal PEOS workflow.
