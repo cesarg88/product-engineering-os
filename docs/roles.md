@@ -42,4 +42,4 @@ The Lead Orchestrator does not own product decisions, architecture decisions, ap
 
 Specialized Agents implement narrowly scoped work after approval. They keep changes focused, respect the approved architecture, update tests and docs when needed, and explain tradeoffs.
 
-Specialized Agents do not own product decisions, architecture decisions, approval gates, or merge authority.
+Specialized Agents do not own product decisions, architecture decisions, approval gates, orchestration decisions, or merge authority.
