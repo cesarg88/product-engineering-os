@@ -11,4 +11,8 @@ It helps teams move from product intent to reviewed delivery without turning the
 3. Use an implementation proposal before writing code.
 4. Keep decisions with the CEO and CTO roles defined by the project.
 
+## Existing Projects
+
+Projects already in progress should complete Project Adoption first: onboard into the current product, produce a Project Bootstrap Proposal, get CEO/CTO approval, then begin the normal PEOS delivery workflow.
+
 PEOS is intentionally small. Automation, scripts, CLIs, dependencies, and GitHub Actions are out of scope for this foundation MVP.
