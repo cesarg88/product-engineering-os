@@ -1,45 +1,156 @@
 # Roles
 
-## CEO
+## Purpose
 
-The CEO owns product vision, product behavior, audience, positioning, priorities, and acceptance of user-facing outcomes.
+This document defines the responsibilities and decision authority of every role in PEOS.
 
-## CTO
+Each role owns a specific part of the development process.
 
-The CTO owns technical strategy, architecture, technical standards, system quality, and acceptance of technical tradeoffs.
+Responsibilities should never overlap unless explicitly stated.
 
-## Lead Orchestrator
+---
 
-The Lead Orchestrator owns delivery coordination for approved work.
+# CEO
 
-This role reads project context, prepares implementation proposals, identifies affected areas, breaks approved work into small reviewable tasks, coordinates execution, and prepares pull requests for CEO/CTO review.
+## Purpose
 
-For each approved task, milestone, or pull request, the Lead Orchestrator decides the execution model based on complexity, risk, required expertise, and reviewability.
+Owns the product.
 
-The execution model may include:
+The CEO is responsible for ensuring the product solves the right problem and delivers value to users.
 
-- implementing directly;
-- delegating to one specialized agent;
-- splitting internal work across multiple specialized agents;
-- requesting focused specialist review.
+## Responsibilities
 
-Regardless of execution model, the Lead Orchestrator remains accountable for:
+- Product Vision
+- Product Roadmap
+- Epic Specification
+- Product Prioritization
+- Product Acceptance
 
-- scope control;
-- explicit non-scope control;
-- handoff quality;
-- agent coordination;
-- test and validation expectations;
-- pull request clarity;
-- risk and tradeoff visibility;
-- readiness for CEO/CTO review.
+The CEO does not participate in implementation details.
 
-The external delivery unit remains the approved task, milestone, or pull request. Internal agent allocation is an orchestration detail unless it changes scope, creates material risk, or affects reviewability.
+---
 
-The Lead Orchestrator does not own product decisions, architecture decisions, approval gates, or merge authority.
+# CTO
 
-## Specialized Agents
+## Purpose
 
-Specialized Agents implement narrowly scoped work after approval. They keep changes focused, respect the approved architecture, update tests and docs when needed, and explain tradeoffs.
+Owns the technical strategy.
 
-Specialized Agents do not own product decisions, architecture decisions, approval gates, orchestration decisions, or merge authority.
+The CTO ensures the product remains technically coherent and maintainable over time.
+
+## Responsibilities
+
+- Technical Strategy
+- Architecture
+- Technical Decisions
+- ADRs
+- Technical Acceptance
+
+The CTO does not review every implementation Pull Request.
+
+Instead, the CTO validates that each completed Epic remains aligned with the approved technical strategy.
+
+---
+
+# Lead Orchestrator
+
+## Purpose
+
+Owns execution planning.
+
+The Lead Orchestrator translates approved product and technical decisions into an executable implementation plan.
+
+## Responsibilities
+
+- Read approved documentation
+- Produce the Implementation Proposal
+- Decompose Epics into Work Packages
+- Coordinate Specialized Agents
+- Track implementation progress
+- Open the final Epic Pull Request
+
+The Lead Orchestrator does not redefine product or architecture.
+
+---
+
+# Principal Engineer
+
+## Purpose
+
+Owns technical quality during implementation.
+
+The Principal Engineer ensures every Work Package remains aligned with the approved architecture and the intent of the Epic.
+
+## Responsibilities
+
+- Review the Implementation Proposal
+- Review every Work Package Pull Request
+- Request changes when necessary
+- Ensure architectural consistency
+- Ensure implementation quality
+- Validate test coverage
+- Approve Work Package Pull Requests
+
+The Principal Engineer does not redefine product goals or technical strategy.
+
+Those responsibilities belong to the CEO and CTO.
+
+---
+
+# Specialized Agents
+
+## Purpose
+
+Implement approved Work Packages.
+
+## Responsibilities
+
+- Production code
+- Tests
+- Documentation updates
+- Refactoring
+- Bug fixes
+
+Specialized Agents never redefine architecture or product behaviour.
+
+When implementation reveals uncertainty, they escalate it to the Lead Orchestrator.
+
+---
+
+# Responsibility Summary
+
+| Role | Main Responsibility |
+|------|---------------------|
+| CEO | Product |
+| CTO | Technical Strategy |
+| Lead Orchestrator | Execution Planning |
+| Principal Engineer | Technical Quality During Delivery |
+| Specialized Agents | Implementation |
+
+---
+
+# Escalation Path
+
+Questions should always move upward through the organization.
+
+Specialized Agent
+
+↓
+
+Lead Orchestrator
+
+↓
+
+Principal Engineer
+
+↓
+
+CTO
+
+↓
+
+CEO
+
+Only decisions move upward.
+
+Implementation should always move downward.
